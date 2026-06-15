@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: 'Schibsted Grotesk', sans-serif; background: #e7e7e2; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    @keyframes agFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes agDraw { to { stroke-dashoffset: 0; } }
+  </style>
+</helmet>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 48px 96px;">
+
+  <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; max-width: 720px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #2563eb; font-weight: 500;">PORTFOLIO · HERO DIRECTIONS · 01</div>
+    <h1 style="font-size: 40px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; color: #14161c; font-weight: 800;">Three directions for your hero.</h1>
+    <p style="font-size: 16px; line-height: 1.6; color: #5b5e66; margin: 0;">All three share one system — warm off-white, ink near-black, a single blue accent, clean sans for reading, mono for labels — so you can mix freely. Tell me which hero to carry into the full site, or combine pieces (e.g. graph from B with the type scale of A).</p>
+  </div>
+
+  <!-- DIRECTION A -->
+  <div style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: #14161c; letter-spacing: 0.04em;">A</span>
+      <span style="font-size: 15px; font-weight: 600; color: #14161c;">Editorial Statement</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8b8e96;">type-forward · whitespace · quiet schematic</span>
+    </div>
+    <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.10); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20,22,28,0.4);">
+      <!-- nav -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 44px; border-bottom: 1px solid rgba(20,22,28,0.06);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #14161c; letter-spacing: 0.02em;">aekansh.dev</div>
+        <div style="display: flex; align-items: center; gap: 28px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">work</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">experience</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">about</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #14161c; border: 1px solid rgba(20,22,28,0.18); padding: 7px 14px; border-radius: 999px;">contact</span>
+        </div>
+      </div>
+      <!-- body -->
+      <div style="position: relative; padding: 64px 44px 72px; min-height: 520px; overflow: hidden;">
+        <!-- faint grid -->
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(20,22,28,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,28,0.035) 1px, transparent 1px); background-size: 38px 38px; pointer-events: none;"></div>
+        <!-- node cluster top-right -->
+        <svg viewBox="0 0 320 260" style="position: absolute; top: 30px; right: 30px; width: 360px; height: 300px; opacity: 0.9; pointer-events: none;">
+          <line x1="60" y1="60" x2="180" y2="40" stroke="#2563eb" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="180" y1="40" x2="260" y2="120" stroke="#2563eb" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="60" y1="60" x2="120" y2="160" stroke="#2563eb" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="120" y1="160" x2="260" y2="120" stroke="#2563eb" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="120" y1="160" x2="200" y2="220" stroke="#2563eb" stroke-width="1" stroke-opacity="0.25"/>
+          <circle cx="60" cy="60" r="4" fill="#2563eb"/>
+          <circle cx="180" cy="40" r="5" fill="#f7f7f4" stroke="#2563eb" stroke-width="1.5"/>
+          <circle cx="260" cy="120" r="4" fill="#2563eb"/>
+          <circle cx="120" cy="160" r="6" fill="#2563eb"/>
+          <circle cx="200" cy="220" r="3.5" fill="#f7f7f4" stroke="#2563eb" stroke-width="1.5"/>
+        </svg>
+
+        <div style="position: relative; max-width: 760px; animation: agFadeUp 0.7s ease both;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #2563eb; font-weight: 500; margin-bottom: 26px;">AEKANSH GUPTA — DATA ENGINEER</div>
+          <h2 style="font-size: 62px; line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 28px; color: #14161c; font-weight: 800; text-wrap: balance;">Turning messy data into reliable, decision&#8209;ready systems.</h2>
+          <p style="font-size: 18px; line-height: 1.6; color: #5b5e66; margin: 0 0 38px; max-width: 540px;">I design and operate the pipelines, warehouses and platforms that move data at scale — from raw ingestion to the dashboards teams trust.</p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 999px;">View work →</span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; color: #14161c; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 999px; border: 1px solid rgba(20,22,28,0.2);">Download résumé</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECTION B -->
+  <div style="margin-bottom: 56px;">
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: #14161c; letter-spacing: 0.04em;">B</span>
+      <span style="font-size: 15px; font-weight: 600; color: #14161c;">Live Node Graph</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8b8e96;">split layout · animated skill network · data flow</span>
+    </div>
+    <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.10); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20,22,28,0.4);">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 44px; border-bottom: 1px solid rgba(20,22,28,0.06);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #14161c; letter-spacing: 0.02em;">aekansh.dev</div>
+        <div style="display: flex; align-items: center; gap: 28px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">work</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">experience</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">about</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #14161c; border: 1px solid rgba(20,22,28,0.18); padding: 7px 14px; border-radius: 999px;">contact</span>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 520px;">
+        <div style="padding: 76px 44px; display: flex; flex-direction: column; justify-content: center; animation: agFadeUp 0.7s ease both;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #2563eb; font-weight: 500; margin-bottom: 22px;">// DATA ENGINEER</div>
+          <h2 style="font-size: 56px; line-height: 1.0; letter-spacing: -0.03em; margin: 0 0 22px; color: #14161c; font-weight: 800;">Aekansh<br>Gupta</h2>
+          <p style="font-size: 17px; line-height: 1.6; color: #5b5e66; margin: 0 0 36px; max-width: 420px;">I build data platforms that stay fast and trustworthy as they scale — orchestrating ingestion, transformation and serving across the modern cloud stack.</p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 999px;">View work →</span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; color: #14161c; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 999px; border: 1px solid rgba(20,22,28,0.2);">Résumé</span>
+          </div>
+        </div>
+        <div style="position: relative; border-left: 1px solid rgba(20,22,28,0.06); background: linear-gradient(180deg, #f4f4f0, #efefea);">
+          <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(20,22,28,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,28,0.04) 1px, transparent 1px); background-size: 32px 32px; pointer-events: none;"></div>
+          <canvas id="agGraphB" style="position: absolute; inset: 0; width: 100%; height: 100%;"></canvas>
+          <div style="position: absolute; left: 24px; bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8b8e96; letter-spacing: 0.04em;">skill_graph.live ·  6 nodes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECTION C -->
+  <div style="margin-bottom: 24px;">
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: #14161c; letter-spacing: 0.04em;">C</span>
+      <span style="font-size: 15px; font-weight: 600; color: #14161c;">Schematic Pipeline</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8b8e96;">blueprint feel · architecture diagram as hero</span>
+    </div>
+    <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.10); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20,22,28,0.4);">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 44px; border-bottom: 1px solid rgba(20,22,28,0.06);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #14161c; letter-spacing: 0.02em;">aekansh.dev</div>
+        <div style="display: flex; align-items: center; gap: 28px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">work</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">experience</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5b5e66;">about</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #14161c; border: 1px solid rgba(20,22,28,0.18); padding: 7px 14px; border-radius: 999px;">contact</span>
+        </div>
+      </div>
+      <div style="position: relative; padding: 56px 44px 60px; min-height: 520px; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none;"></div>
+        <div style="position: relative; max-width: 620px; margin-bottom: 52px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #2563eb; font-weight: 500; margin-bottom: 18px;">AEKANSH GUPTA · DATA ENGINEER</div>
+          <h2 style="font-size: 48px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 16px; color: #14161c; font-weight: 800;">Architecting data, end&#8209;to&#8209;end.</h2>
+          <p style="font-size: 17px; line-height: 1.6; color: #5b5e66; margin: 0;">From source systems to the serving layer — every stage designed for scale, reliability and cost.</p>
+        </div>
+        <!-- pipeline schematic -->
+        <div style="position: relative; display: flex; align-items: stretch; gap: 0;">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(20,22,28,0.12); border-radius: 12px; background: rgba(255,255,255,0.55);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8b8e96;">01 · SOURCES</span>
+            <span style="font-size: 15px; font-weight: 700; color: #14161c;">APIs · Logs · OLTP</span>
+            <span style="font-size: 13px; color: #5b5e66; line-height: 1.4;">Streaming &amp; batch inputs</span>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 6px; color: #2563eb; font-family: 'JetBrains Mono', monospace; font-weight: 600;">→</div>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(20,22,28,0.12); border-radius: 12px; background: rgba(255,255,255,0.55);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8b8e96;">02 · INGEST</span>
+            <span style="font-size: 15px; font-weight: 700; color: #14161c;">Kafka · Spark</span>
+            <span style="font-size: 13px; color: #5b5e66; line-height: 1.4;">Stream + bulk load</span>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 6px; color: #2563eb; font-family: 'JetBrains Mono', monospace; font-weight: 600;">→</div>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(37,99,235,0.4); border-radius: 12px; background: rgba(37,99,235,0.06);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #2563eb;">03 · TRANSFORM</span>
+            <span style="font-size: 15px; font-weight: 700; color: #14161c;">Spark · SQL</span>
+            <span style="font-size: 13px; color: #5b5e66; line-height: 1.4;">Model &amp; quality checks</span>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 6px; color: #2563eb; font-family: 'JetBrains Mono', monospace; font-weight: 600;">→</div>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(20,22,28,0.12); border-radius: 12px; background: rgba(255,255,255,0.55);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8b8e96;">04 · WAREHOUSE</span>
+            <span style="font-size: 15px; font-weight: 700; color: #14161c;">Snowflake</span>
+            <span style="font-size: 13px; color: #5b5e66; line-height: 1.4;">Governed single source</span>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 6px; color: #2563eb; font-family: 'JetBrains Mono', monospace; font-weight: 600;">→</div>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(20,22,28,0.12); border-radius: 12px; background: rgba(255,255,255,0.55);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8b8e96;">05 · SERVE</span>
+            <span style="font-size: 15px; font-weight: 700; color: #14161c;">BI · ML · APIs</span>
+            <span style="font-size: 13px; color: #5b5e66; line-height: 1.4;">Decisions &amp; products</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8b8e96; margin: 32px 0 0;">// reply with A, B or C — or mix. next: full single-page site with all 7 sections.</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { this._t = setTimeout(() => this.initGraph(), 60); }
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._t) clearTimeout(this._t);
+    if (this._ro) this._ro.disconnect();
+  }
+  initGraph() {
+    const canvas = document.getElementById('agGraphB');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const resize = () => {
+      const r = canvas.getBoundingClientRect();
+      if (r.width === 0) return;
+      canvas.width = Math.round(r.width * dpr);
+      canvas.height = Math.round(r.height * dpr);
+    };
+    resize();
+    this._ro = new ResizeObserver(resize);
+    this._ro.observe(canvas);
+
+    const sats = [
+      { label: 'Python',    ang: -Math.PI * 0.5,  rad: 0.40 },
+      { label: 'Spark',     ang: -Math.PI * 0.16, rad: 0.46 },
+      { label: 'SQL',       ang:  Math.PI * 0.20,  rad: 0.40 },
+      { label: 'AWS',       ang:  Math.PI * 0.52,  rad: 0.46 },
+      { label: 'Snowflake', ang:  Math.PI * 0.84,  rad: 0.42 },
+      { label: 'Scala',     ang: -Math.PI * 0.84,  rad: 0.44 },
+    ];
+
+    const accent = '#2563eb';
+    const start = performance.now();
+
+    const draw = (now) => {
+      const t = (now - start) / 1000;
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      const cx = w * 0.5, cy = h * 0.48;
+      const base = Math.min(w, h);
+
+      const pts = sats.map((s, i) => {
+        const drift = Math.sin(t * 0.7 + i * 1.3) * base * 0.018;
+        const r = base * s.rad + drift;
+        return {
+          x: cx + Math.cos(s.ang + Math.sin(t * 0.25 + i) * 0.04) * r,
+          y: cy + Math.sin(s.ang + Math.sin(t * 0.25 + i) * 0.04) * r,
+          label: s.label,
+        };
+      });
+
+      // edges
+      pts.forEach((p) => {
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(p.x, p.y);
+        ctx.strokeStyle = 'rgba(37,99,235,0.22)';
+        ctx.lineWidth = 1 * dpr;
+        ctx.stroke();
+      });
+
+      // flowing pulses along edges
+      pts.forEach((p, i) => {
+        const prog = ((t * 0.45 + i * 0.16) % 1);
+        const px = cx + (p.x - cx) * prog;
+        const py = cy + (p.y - cy) * prog;
+        ctx.beginPath();
+        ctx.arc(px, py, 2.4 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = accent;
+        ctx.globalAlpha = 0.9 * (1 - Math.abs(prog - 0.5) * 0.8);
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      });
+
+      // satellite nodes
+      ctx.font = `${11 * dpr}px 'JetBrains Mono', monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      pts.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = '#f7f7f4';
+        ctx.fill();
+        ctx.lineWidth = 1.5 * dpr;
+        ctx.strokeStyle = accent;
+        ctx.stroke();
+        ctx.fillStyle = '#14161c';
+        ctx.fillText(p.label, p.x, p.y - 15 * dpr);
+      });
+
+      // center node
+      ctx.beginPath();
+      ctx.arc(cx, cy, 22 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = accent;
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = `600 ${10 * dpr}px 'JetBrains Mono', monospace`;
+      ctx.fillText('DATA', cx, cy);
+
+      this._raf = requestAnimationFrame(draw);
+    };
+    this._raf = requestAnimationFrame(draw);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

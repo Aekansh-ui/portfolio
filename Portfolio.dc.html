@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="56" fill="#f7f7f4"/><circle cx="40" cy="28" r="10" fill="#2563eb"/><line x1="40" y1="28" x2="20" y2="16" stroke="#2563eb" stroke-width="1" stroke-opacity="0.5"/><line x1="40" y1="28" x2="62" y2="18" stroke="#2563eb" stroke-width="1" stroke-opacity="0.5"/><line x1="40" y1="28" x2="64" y2="38" stroke="#2563eb" stroke-width="1" stroke-opacity="0.5"/><line x1="40" y1="28" x2="18" y2="42" stroke="#2563eb" stroke-width="1" stroke-opacity="0.5"/><circle cx="20" cy="16" r="3" fill="#f7f7f4" stroke="#2563eb" stroke-width="1.2"/><circle cx="62" cy="18" r="3" fill="#2563eb"/><circle cx="64" cy="38" r="3" fill="#f7f7f4" stroke="#2563eb" stroke-width="1.2"/><circle cx="18" cy="42" r="3" fill="#2563eb"/></svg></template>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Schibsted Grotesk', sans-serif; background: #f7f7f4; color: #14161c; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    section { scroll-margin-top: 84px; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: #2563eb; color: #fff; }
+    @keyframes agFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    @media (max-width: 860px) {
+      [data-r="stack"] { grid-template-columns: 1fr !important; gap: 22px !important; }
+    }
+    @media (max-width: 760px) {
+      h1 { font-size: 40px !important; line-height: 1.05 !important; }
+      h2 { font-size: 30px !important; line-height: 1.08 !important; }
+      [data-r="navlink"] { display: none !important; }
+      [data-r="hero-graph"] { display: none !important; }
+      [data-r="pad"] { padding: 62px 22px !important; }
+      [data-r="pad-hero"] { padding: 96px 22px 54px !important; }
+      [data-r="pad-contact"] { padding: 78px 22px 52px !important; }
+      [data-r="graph"] { height: 460px !important; }
+      [data-r="portrait"] { max-width: 300px !important; }
+      [data-r="stats"] { gap: 14px !important; }
+    }
+  </style>
+</helmet>
+
+<!-- ============ NAV ============ -->
+<div style="position: sticky; top: 0; z-index: 50; background: rgba(247,247,244,0.82); backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid rgba(20,22,28,0.07);">
+  <nav style="max-width: 1180px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between;">
+    <a href="#top" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; letter-spacing: 0.01em; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #2563eb; display: inline-block;"></span>aekansh.tsv
+    </a>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <span data-r="navlink" style="display: flex; align-items: center; gap: 30px;">
+        <a href="#skills" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;">skills</a>
+        <a href="#experience" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;">experience</a>
+        <a href="#work" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;">work</a>
+        <a href="#learning" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;">learning</a>
+        <a href="#about" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;">about</a>
+      </span>
+      <a href="#contact" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: white; background: #2563eb; border: 1px solid #2563eb; padding: 8px 16px; border-radius: 999px;" style-hover="background:#14161c;color:#fff;border-color:#14161c;">contact</a>
+    </div>
+  </nav>
+</div>
+
+<div id="top"></div>
+
+<!-- ============ HERO (Direction A) ============ -->
+<section style="position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(20,22,28,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,28,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; mask-image: linear-gradient(180deg, #000 40%, transparent 100%);"></div>
+  <canvas id="agHero" data-r="hero-graph" style="position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; -webkit-mask-image: linear-gradient(100deg, transparent 26%, #000 58%); mask-image: linear-gradient(100deg, transparent 26%, #000 58%);" aria-hidden="true"></canvas>
+
+  <div data-r="pad-hero" style="position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 132px 40px 120px;">
+    <div data-reveal style="max-width: 800px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.22em; color: #2563eb; font-weight: 500; margin-bottom: 30px;">AEKANSH GUPTA — DATA ENGINEER</div>
+      <h1 style="font-size: 52px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 30px; font-weight: 800; text-wrap: balance;">Engineering data systems that analysts trust and pipelines that never page you at 3&nbsp;am.</h1>
+      <p style="font-size: 19px; line-height: 1.6; color: #5b5e66; margin: 0 0 42px; max-width: 560px;">I design and operate the pipelines, warehouses and platforms that move data at scale — from raw ingestion all the way to the dashboards and models teams trust.</p>
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+        <a href="#work" style="display: inline-flex; align-items: center; gap: 9px; background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px;" style-hover="background:#1d4ed8;">View work →</a>
+        <a href="#" style="display: inline-flex; align-items: center; gap: 9px; color: #14161c; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px; border: 1px solid rgba(20,22,28,0.2);" style-hover="border-color:#14161c;background:#fff;">Download résumé</a>
+        <div style="display: flex; align-items: center; gap: 18px; margin-left: 8px;">
+          <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;" style-hover="color:#2563eb;">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/aekansh-gupta-710" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5b5e66;" style-hover="color:#2563eb;">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS (Direction B node graph) ============ -->
+<section id="skills" style="background: #f1f1ec; border-top: 1px solid rgba(20,22,28,0.06); border-bottom: 1px solid rgba(20,22,28,0.06);">
+  <div data-r="pad" style="max-width: 1180px; margin: 0 auto; padding: 110px 40px;">
+    <div data-reveal style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 38px;">
+      <div style="max-width: 620px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #2563eb; font-weight: 500; margin-bottom: 16px;">02 / TECHNICAL SKILLS</div>
+        <h2 style="font-size: 46px; line-height: 1.04; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800;">The craft, in progress — and the best part is still ahead.</h2>
+        <p style="font-size: 17px; line-height: 1.6; color: #5b5e66; margin: 0;">A snapshot of where I am today — tools earned through real projects, late debugging sessions, and a lot of iteration. Every node is a milestone; the map is still growing.</p>
+      </div>
+    </div>
+
+    <!-- category chips -->
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+      <button onClick="{{ clearCat }}" style="{{ allChipStyle }}" style-hover="border-color:#2563eb;">All</button>
+      <sc-for list="{{ chips }}" as="chip" hint-placeholder-count="5">
+        <button onClick="{{ chip.onClick }}" style="{{ chip.style }}" style-hover="border-color:#2563eb;">{{ chip.label }}</button>
+      </sc-for>
+    </div>
+
+    <!-- graph -->
+    <div data-reveal data-r="graph" style="position: relative; height: 540px; border: 1px solid rgba(20,22,28,0.1); border-radius: 20px; overflow: hidden; background: #f7f7f4;">
+      <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(20,22,28,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,28,0.035) 1px, transparent 1px); background-size: 34px 34px; pointer-events: none;"></div>
+      <canvas id="agSkills" style="position: absolute; inset: 0; width: 100%; height: 100%; cursor: pointer;"></canvas>
+      <div style="position: absolute; left: 22px; bottom: 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9a9da4; letter-spacing: 0.04em; pointer-events: none;">skill_graph.live · 6 clusters · 18 nodes</div>
+    </div>
+
+    <!-- category cards -->
+    <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px;">
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 14px; padding: 20px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px;">LANGUAGES</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 14.5px; font-weight: 600;">Python</span><span style="font-size: 14.5px; font-weight: 600;">SQL</span><span style="font-size: 14.5px; font-weight: 600;">Shell Script</span>
+        </div>
+      </div>
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 14px; padding: 20px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px;">DATA &amp; PROCESSING</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 14.5px; font-weight: 600;">PySpark</span><span style="font-size: 14.5px; font-weight: 600;">Pandas</span><span style="font-size: 14.5px; font-weight: 600;">Hive</span><span style="font-size: 14.5px; font-weight: 600;">HBase</span><span style="font-size: 14.5px; font-weight: 600;">Data Modelling</span>
+        </div>
+      </div>
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 14px; padding: 20px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px;">CLOUD &amp; INFRA</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 14.5px; font-weight: 600;">AWS</span><span style="font-size: 14.5px; font-weight: 600;">Docker</span><span style="font-size: 14.5px; font-weight: 600;">ECS</span>
+        </div>
+      </div>
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 14px; padding: 20px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px;">WAREHOUSE</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 14.5px; font-weight: 600;">Snowflake</span><span style="font-size: 14.5px; font-weight: 600;">Oracle</span><span style="font-size: 14.5px; font-weight: 600;">AWS RDS</span>
+        </div>
+      </div>
+
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 14px; padding: 20px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 12px;">AI / LLM</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 14.5px; font-weight: 600;">RAG</span><span style="font-size: 14.5px; font-weight: 600;">Copilot</span><span style="font-size: 14.5px; font-weight: 600;">Claude Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE (timeline) ============ -->
+<section id="experience">
+  <div data-r="pad" style="max-width: 1180px; margin: 0 auto; padding: 110px 40px;">
+    <div data-reveal style="max-width: 620px; margin-bottom: 56px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #2563eb; font-weight: 500; margin-bottom: 16px;">03 / EXPERIENCE</div>
+      <h2 style="font-size: 46px; line-height: 1.04; letter-spacing: -0.03em; margin: 0; font-weight: 800;">Built it. Owned it. Delivered it.</h2>
+    </div>
+
+    <div style="position: relative; padding-left: 34px;">
+      <div style="position: absolute; left: 7px; top: 6px; bottom: 6px; width: 1px; background: linear-gradient(180deg, #2563eb, rgba(20,22,28,0.12));"></div>
+
+      <div data-reveal style="position: relative; padding-bottom: 48px;">
+        <span style="position: absolute; left: -34px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: #2563eb; border: 3px solid #f7f7f4; box-shadow: 0 0 0 1px rgba(37,99,235,0.3);"></span>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2563eb; letter-spacing: 0.04em; margin-bottom: 8px;">MAY 2024 — PRESENT</div>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0 0 4px;">Software Engineer II</h3>
+        <div style="font-size: 15px; color: #5b5e66; margin-bottom: 16px;">Clairvoyant (EXL Company) · American Express</div>
+        <ul style="margin: 0 0 16px; padding-left: 18px; color: #44474e; font-size: 15.5px; line-height: 1.65; max-width: 720px;">
+          <li>Developed and maintained a centralised enterprise data repository as the single source of truth for AmEx Small Business Merchant data across multiple business channels.</li>
+          <li>Led migration of critical data workloads from a legacy platform to an upgraded enterprise system, ensuring seamless transition and operational continuity.</li>
+          <li>Owned the enterprise data ingestion and transformation platform, onboarding multi-vendor merchant data into centralised Hive and HBase repositories for downstream analytics and model execution.</li>
+          <li>Designed and implemented a scalable model execution and orchestration framework for Marketing and Campaign Analytics — reduced model onboarding effort by 30% and improved time-to-market significantly.</li>
+          <li>Served as key technical point of contact for Data Science and Analytics teams, translating business requirements into scalable production solutions across multiple stakeholder groups.</li>
+          <li>Developed a RAG-based solution for customer call recordings, enabling faster insight extraction and improving analysts' understanding of customer behaviour patterns.</li>
+        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Hive</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">HBase</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Python</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">RAG</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">SQL</span>
+        </div>
+      </div>
+
+      <div data-reveal style="position: relative; padding-bottom: 48px;">
+        <span style="position: absolute; left: -34px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: #f7f7f4; border: 3px solid #f7f7f4; box-shadow: 0 0 0 1.5px #2563eb;"></span>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2563eb; letter-spacing: 0.04em; margin-bottom: 8px;">SEPT 2023 — DEC 2023</div>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0 0 4px;">Data Engineer</h3>
+        <div style="font-size: 15px; color: #5b5e66; margin-bottom: 16px;">SMRT Systems, USA · Contract</div>
+        <ul style="margin: 0 0 16px; padding-left: 18px; color: #44474e; font-size: 15.5px; line-height: 1.65; max-width: 720px;">
+          <li>Built a data pipeline for seamless migration from a legacy system to AWS S3, with transformation and loading into AWS RDS (SQL Server).</li>
+          <li>Architected the pipeline using no-code services for user-friendly monitoring and maintenance, streamlining operational processes.</li>
+          <li>Collaborated with stakeholders on data processing and cleaning; supported data scientists and analysts in their research.</li>
+          <li>Engaged in database structure design and data modelling to ensure resilient operations.</li>
+        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">AWS S3</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">AWS RDS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">SQL Server</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Python</span>
+        </div>
+      </div>
+
+      <div data-reveal style="position: relative; padding-bottom: 48px;">
+        <span style="position: absolute; left: -34px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: #f7f7f4; border: 3px solid #f7f7f4; box-shadow: 0 0 0 1.5px #2563eb;"></span>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2563eb; letter-spacing: 0.04em; margin-bottom: 8px;">MAY 2022 — AUG 2023</div>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0 0 4px;">Associate, Data Engineering</h3>
+        <div style="font-size: 15px; color: #5b5e66; margin-bottom: 16px;">National Stock Exchange IT</div>
+        <ul style="margin: 0 0 16px; padding-left: 18px; color: #44474e; font-size: 15.5px; line-height: 1.65; max-width: 720px;">
+          <li>Built a metadata-driven pipeline to migrate SEBI-generated data into Oracle, powering BI dashboards — ingests without altering format and monitors file-structure drift.</li>
+          <li>Developed a GCP-to-AWS data migration pipeline via internal servers using shell scripts; handles network failure, memory overload, parallel downloads and detailed logging.</li>
+          <li>Led a team developing a cloud-native Snowflake application for financial data reconciliation, utilising Snowflake compute with fast S3 data accessibility.</li>
+          <li>Migrated traditional pipelines from Greenplum to Snowflake and AWS; optimised scripts to reduce repetitive query execution and lower cost per run.</li>
+          <li>Ran weekly knowledge-sharing and mentoring sessions with the team.</li>
+        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Snowflake</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">AWS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Oracle</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Shell Script</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Greenplum</span>
+        </div>
+      </div>
+
+      <div data-reveal style="position: relative;">
+        <span style="position: absolute; left: -34px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: #f7f7f4; border: 3px solid #f7f7f4; box-shadow: 0 0 0 1.5px rgba(20,22,28,0.25);"></span>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8b8e96; letter-spacing: 0.04em; margin-bottom: 8px;">JULY 2020 — MAY 2022</div>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0 0 4px;">Developer, Data Engineering</h3>
+        <div style="font-size: 15px; color: #5b5e66; margin-bottom: 16px;">Cognizant Technology Solutions</div>
+        <ul style="margin: 0 0 16px; padding-left: 18px; color: #44474e; font-size: 15.5px; line-height: 1.65; max-width: 720px;">
+          <li>Designed and developed complex mappings to move data from SFTP server → Amazon S3 → Snowflake.</li>
+          <li>Automated service orchestration with AWS Step Functions; parallel processing improved pipeline speed by ~20%.</li>
+          <li>Developed AWS Glue jobs in Python for file validation and data standardisation; optimised with caching and shuffling techniques.</li>
+          <li>Implemented archival and backup functionality to prevent data loss; error messages captured in a DynamoDB audit table.</li>
+          <li>Deployed a containerised application via Docker on ECS to download files from SFTP and upload to S3.</li>
+          <li>Created Snowflake Stored Procedures triggered by Glue to load data from S3; wrote unit tests and documented all mapping details.</li>
+        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Python</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">AWS Glue</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Step Functions</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Snowflake</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">Docker</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 5px 11px; border-radius: 999px;">ECS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK (interactive showcase) ============ -->
+<section id="work" style="background: #f1f1ec; border-top: 1px solid rgba(20,22,28,0.06); border-bottom: 1px solid rgba(20,22,28,0.06);">
+  <div data-r="pad" style="max-width: 1180px; margin: 0 auto; padding: 110px 40px;">
+    <div data-reveal style="max-width: 620px; margin-bottom: 44px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #2563eb; font-weight: 500; margin-bottom: 16px;">04 / SELECTED WORK</div>
+      <h2 style="font-size: 46px; line-height: 1.04; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800;">Projects, end&#8209;to&#8209;end.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #5b5e66; margin: 0;">Pick a project to see its architecture, the challenges it solved, and the outcomes.</p>
+    </div>
+
+    <div data-reveal data-r="stack" style="display: grid; grid-template-columns: 320px 1fr; gap: 28px; align-items: start;">
+      <!-- list -->
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ projectRows }}" as="row" hint-placeholder-count="3">
+          <button onClick="{{ row.onClick }}" style="{{ row.style }}">
+            <span style="{{ row.dotStyle }}"></span>
+            <span style="display: flex; flex-direction: column; gap: 3px; text-align: left;">
+              <span style="font-size: 15.5px; font-weight: 700; color: #14161c;">{{ row.name }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8b8e96; letter-spacing: 0.04em;">{{ row.meta }}</span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+
+      <!-- detail -->
+      <div style="background: #f7f7f4; border: 1px solid rgba(20,22,28,0.1); border-radius: 20px; overflow: hidden;">
+
+        <div style="padding: 30px 32px 34px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #2563eb; border: 1px solid rgba(37,99,235,0.35); padding: 4px 10px; border-radius: 999px;">{{ selected.tag }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8b8e96;">{{ selected.year }}</span>
+          </div>
+          <h3 style="font-size: 27px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px;">{{ selected.name }}</h3>
+          <p style="font-size: 16px; line-height: 1.6; color: #5b5e66; margin: 0 0 24px; max-width: 640px;">{{ selected.blurb }}</p>
+
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8b8e96; margin-bottom: 12px;">ARCHITECTURE</div>
+          <div style="margin-bottom: 26px;">{{ archDiagram }}</div>
+
+          <div data-r="stack" style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 26px;">
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8b8e96; margin-bottom: 8px;">CHALLENGE</div>
+              <p style="font-size: 14.5px; line-height: 1.6; color: #44474e; margin: 0;">{{ selected.challenge }}</p>
+            </div>
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8b8e96; margin-bottom: 8px;">OUTCOME</div>
+              <p style="font-size: 14.5px; line-height: 1.6; color: #44474e; margin: 0;">{{ selected.outcome }}</p>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 22px; border-top: 1px solid rgba(20,22,28,0.08);">
+            <sc-for list="{{ selected.stack }}" as="tech" hint-placeholder-count="4">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #14161c; background: rgba(37,99,235,0.07); padding: 6px 12px; border-radius: 999px;">{{ tech }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEARNING ============ -->
+<section id="learning">
+  <div data-r="pad" style="max-width: 1180px; margin: 0 auto; padding: 110px 40px;">
+    <div data-reveal style="max-width: 640px; margin-bottom: 48px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #2563eb; font-weight: 500; margin-bottom: 16px;">05 / PERSONAL PROJECTS &amp; LEARNING</div>
+      <h2 style="font-size: 46px; line-height: 1.04; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800;">Always shipping &amp; learning.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #5b5e66; margin: 0;">Self-driven builds, experiments, and the certifications keeping my craft sharp.</p>
+    </div>
+
+    <div data-reveal data-r="stack" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start;">
+      <!-- personal projects -->
+      <div data-r="stack" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;" style-hover="border-color:#2563eb;">
+          <div style="width: 30px; height: 30px; border-radius: 8px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #2563eb;"></span></div>
+          <h4 style="font-size: 16.5px; font-weight: 700; margin: 0 0 6px;">spark-utils</h4>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5b5e66; margin: 0 0 14px;">Open-source helpers for common Spark transformations and testing.</p>
+          <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #2563eb;">view repo ↗</a>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;" style-hover="border-color:#2563eb;">
+          <div style="width: 30px; height: 30px; border-radius: 8px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #2563eb;"></span></div>
+          <h4 style="font-size: 16.5px; font-weight: 700; margin: 0 0 6px;">finance-etl</h4>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5b5e66; margin: 0 0 14px;">A personal ETL that pulls, models and visualises my own spending data.</p>
+          <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #2563eb;">view repo ↗</a>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;" style-hover="border-color:#2563eb;">
+          <div style="width: 30px; height: 30px; border-radius: 8px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #2563eb;"></span></div>
+          <h4 style="font-size: 16.5px; font-weight: 700; margin: 0 0 6px;">datagraph-viz</h4>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5b5e66; margin: 0 0 14px;">Canvas tool that renders pipeline lineage as an interactive graph.</p>
+          <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #2563eb;">view repo ↗</a>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;" style-hover="border-color:#2563eb;">
+          <div style="width: 30px; height: 30px; border-radius: 8px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #2563eb;"></span></div>
+          <h4 style="font-size: 16.5px; font-weight: 700; margin: 0 0 6px;">stream-lab</h4>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5b5e66; margin: 0 0 14px;">A sandbox for experimenting with real-time streaming patterns.</p>
+          <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #2563eb;">view repo ↗</a>
+        </div>
+      </div>
+
+      <!-- certifications + learning -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 16px;">CERTIFICATIONS</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start;"><span style="margin-top: 6px; width: 7px; height: 7px; border-radius: 50%; background: #2563eb; flex: none;"></span><div><div style="font-size: 14.5px; font-weight: 600;">AWS Certified Cloud Practitioner</div><div style="font-size: 12.5px; color: #8b8e96;">Amazon Web Services</div></div></div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;"><span style="margin-top: 6px; width: 7px; height: 7px; border-radius: 50%; background: #2563eb; flex: none;"></span><div><div style="font-size: 14.5px; font-weight: 600;">SnowPro Core Certified</div><div style="font-size: 12.5px; color: #8b8e96;">Snowflake</div></div></div>
+          </div>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(20,22,28,0.1); border-radius: 16px; padding: 22px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 16px;">CURRENTLY LEARNING</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 6px 12px; border-radius: 999px;">Apache Flink</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 6px 12px; border-radius: 999px;">Rust for data</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 6px 12px; border-radius: 999px;">LLM data pipelines</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 6px 12px; border-radius: 999px;">dbt</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #5b5e66; border: 1px solid rgba(20,22,28,0.14); padding: 6px 12px; border-radius: 999px;">Vector DBs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" style="background: #f1f1ec; border-top: 1px solid rgba(20,22,28,0.06); border-bottom: 1px solid rgba(20,22,28,0.06);">
+  <div data-r="pad" style="max-width: 1180px; margin: 0 auto; padding: 110px 40px;">
+    <div data-reveal data-r="stack" style="display: grid; grid-template-columns: 360px 1fr; gap: 56px; align-items: start;">
+      <div>
+        <div data-r="portrait" style="aspect-ratio: 4/5; border-radius: 18px; border: 1px solid rgba(20,22,28,0.12); background-image: repeating-linear-gradient(45deg, rgba(37,99,235,0.05) 0, rgba(37,99,235,0.05) 10px, transparent 10px, transparent 20px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9a9da4; letter-spacing: 0.04em;">[ portrait ]</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #2563eb; font-weight: 500; margin-bottom: 16px;">06 / ABOUT</div>
+        <h2 style="font-size: 40px; line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 24px; font-weight: 800;">Engineer at heart, builder by habit.</h2>
+        <div style="display: flex; flex-direction: column; gap: 18px; font-size: 16.5px; line-height: 1.68; color: #44474e; max-width: 640px;">
+          <p style="margin: 0;">I'm a data engineer from VIT Vellore. Starting at Cognizant in 2020, I've grown through NSE IT, SMRT Systems, and now Clairvoyant (EXL Company), where I build enterprise-scale data pipelines and ML orchestration platforms for American Express.</p>
+          <p style="margin: 0;">Across 5+ years I've worked on SEBI regulatory pipelines, GCP-to-AWS migrations, SFTP-to-Snowflake ETL, and now enterprise merchant data infrastructure and RAG-based AI solutions at AmEx. My approach is consistent: understand the data and the stakeholders, design for failure, and keep operations boring where it counts.</p>
+          <p style="margin: 0;">Outside of engineering, I led technical workshops as Vice Chairperson of SME VIT and organised events with the Fine Arts Club — I believe the best engineers combine technical depth with curiosity and genuine interest in the people they build for.</p>
+        </div>
+        <div data-r="stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; max-width: 520px;">
+          <div><div style="font-size: 34px; font-weight: 800; letter-spacing: -0.02em;">5+</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b8e96; margin-top: 4px;">years building</div></div>
+          <div><div style="font-size: 34px; font-weight: 800; letter-spacing: -0.02em;">4</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b8e96; margin-top: 4px;">companies</div></div>
+          <div><div style="font-size: 34px; font-weight: 800; letter-spacing: -0.02em;">2</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #8b8e96; margin-top: 4px;">certifications</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT (dark) ============ -->
+<section id="contact" style="position: relative; background: #14161c; color: #f7f7f4; overflow: hidden;">
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+  <canvas id="agContact" style="position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none;" aria-hidden="true"></canvas>
+
+  <div data-r="pad-contact" style="position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 120px 40px 70px;">
+    <div data-reveal style="max-width: 760px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; letter-spacing: 0.16em; color: #6ea8fe; font-weight: 500; margin-bottom: 22px;">07 / CONTACT</div>
+      <h2 style="font-size: 58px; line-height: 1.02; letter-spacing: -0.035em; margin: 0 0 24px; font-weight: 800;">Let's build something reliable.</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: #a9adb6; margin: 0 0 40px; max-width: 520px;">Open to data engineering roles and interesting problems. The fastest way to reach me is email — or find me on the platforms below.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="/cdn-cgi/l/email-protection#1170747a707f6279766461657051767c70787d3f727e7c" style="display: inline-flex; align-items: center; gap: 9px; background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px;" style-hover="background:#1d4ed8;"><span class="__cf_email__" data-cfemail="19787c7278776a717e6c696d78597e74787075377a7674">[email&#160;protected]</span></a>
+        <a href="#" style="display: inline-flex; align-items: center; gap: 9px; color: #f7f7f4; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22);" style-hover="border-color:#fff;background:rgba(255,255,255,0.06);">Download résumé</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px;">
+        <a href="https://github.com/Aekansh-ui" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #a9adb6;" style-hover="color:#6ea8fe;">GitHub · Aekansh-ui ↗</a>
+        <a href="https://www.linkedin.com/in/aekansh-gupta-710" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #a9adb6;" style-hover="color:#6ea8fe;">LinkedIn · aekansh-gupta ↗</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 96px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6b6f78;">© 2026 Aekansh Gupta</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6b6f78;">Built with data &amp; care.</span>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1180, &quot;height&quot;: 900}}">
+class Component extends DCLogic {
+  state = { activeCat: null, selected: 0 };
+
+  cats = [
+    { id: 'lang',  label: 'Languages',        skills: ['Python', 'SQL', 'Shell\nScript'] },
+    { id: 'proc',  label: 'Data & Processing', skills: ['PySpark', 'Pandas', 'Hive', 'HBase', 'Data\nModelling'] },
+    { id: 'cloud', label: 'Cloud & Infra',    skills: ['AWS', 'Docker', 'ECS'] },
+    { id: 'store', label: 'Warehouse',        skills: ['Snowflake', 'Oracle', 'AWS RDS'] },
+    { id: 'ai',    label: 'AI / LLM',         skills: ['RAG', 'Copilot', 'Claude\nCode'] },
+  ];
+
+  projects = [
+    {
+      name: 'Model Execution Framework', tag: 'American Express', year: '2024–Present', shot: 'orchestration framework',
+      blurb: 'Scalable model execution and orchestration framework for American Express Marketing and Campaign Analytics — automated monthly processing for multiple Data Science teams.',
+      stages: [['01','INGEST','Merchant data'], ['02','STORE','Hive & HBase'], ['03','ORCHESTRATE','Framework'], ['04','EXECUTE','Model runs'], ['05','SERVE','Analytics teams']],
+      challenge: 'Data Science teams needed a reusable automated framework to onboard and execute analytical models at scale without repeated engineering effort per campaign cycle.',
+      outcome: 'Reduced model onboarding effort by 30%; significantly improved time-to-market for analytical solutions across multiple stakeholder groups.',
+      stack: ['Python', 'Hive', 'HBase', 'SQL'],
+    },
+    {
+      name: 'RAG for Call Recordings', tag: 'American Express', year: '2025–26', shot: 'RAG pipeline diagram',
+      blurb: 'Retrieval-Augmented Generation solution over customer call recordings, enabling analysts to extract insights faster and understand customer requirements and behaviour patterns.',
+      stages: [['01','SOURCE','Call recordings'], ['02','CHUNK','Transcription'], ['03','EMBED','Vector store'], ['04','RETRIEVE','RAG engine'], ['05','SERVE','Analyst UI']],
+      challenge: 'Analysts spent significant time manually reviewing call recordings to extract patterns — a slow and unscalable process.',
+      outcome: 'Faster insight extraction from customer calls; improved analysts\' ability to understand and act on customer behaviour patterns.',
+      stack: ['Python', 'RAG', 'LLM', 'Prompt Eng.'],
+    },
+    {
+      name: 'SEBI Data Pipeline', tag: 'NSE IT', year: '2022–23', shot: 'metadata pipeline diagram',
+      blurb: 'A metadata-driven pipeline to migrate SEBI-generated data into Oracle without altering its format, with continuous monitoring for structural drift in incoming files.',
+      stages: [['01','SOURCE','SEBI files'], ['02','INGEST','Metadata pipeline'], ['03','VALIDATE','Format & structure'], ['04','LOAD','Oracle DB'], ['05','SERVE','BI dashboards']],
+      challenge: 'Data had to land in Oracle unchanged, while the pipeline needed to automatically detect any changes in the upstream file structure.',
+      outcome: 'Reliable low-touch ingestion with automated structure monitoring, clean Oracle data powering live BI dashboards.',
+      stack: ['Python', 'Oracle', 'SQL', 'Shell Script'],
+    },
+    {
+      name: 'GCP → AWS Migration', tag: 'NSE IT', year: '2022', shot: 'cloud migration architecture',
+      blurb: 'Migrated applications and data from GCP to AWS via NSE internal servers using shell scripts, with full cost governance, architecture design and robust fault handling.',
+      stages: [['01','SOURCE','GCP'], ['02','TRANSFER','Shell scripts'], ['03','HANDLE','Network & mem'], ['04','STORE','AWS S3'], ['05','VERIFY','Log reconciliation']],
+      challenge: 'The pipeline had to handle network failures, memory overloading and parallel downloads reliably, with detailed logs to support reconciliation.',
+      outcome: 'Production-grade migration with zero data loss, parallel download support, and a full audit trail enabling easy reconciliation.',
+      stack: ['Shell Script', 'AWS S3', 'AWS', 'Python'],
+    },
+    {
+      name: 'SFTP → Snowflake Pipeline', tag: 'Cognizant', year: '2020–22', shot: 'ETL pipeline diagram',
+      blurb: 'Full ETL pipeline moving data from an SFTP server through Amazon S3 into Snowflake — with validation, standardisation, archival, error capture and containerised deployment.',
+      stages: [['01','SOURCE','SFTP server'], ['02','INGEST','Docker / ECS'], ['03','PROCESS','AWS Glue'], ['04','ORCHESTRATE','Step Functions'], ['05','LOAD','Snowflake']],
+      challenge: 'Needed end-to-end reliability: file validation, data standardisation, error capturing and archival — with a ~20% speed improvement through parallel processing.',
+      outcome: 'Fully automated pipeline with parallel processing (+20% speed), DynamoDB audit log and a containerised SFTP connector on ECS.',
+      stack: ['Python', 'AWS Glue', 'Step Functions', 'Snowflake', 'Docker', 'ECS'],
+    },
+  ];
+
+  componentDidMount() {
+    this._reveal();
+    this._t = setTimeout(() => { this.initGraph(); this.initHero(); this.initContact(); }, 80);
+  }
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._heroRaf) cancelAnimationFrame(this._heroRaf);
+    if (this._t) clearTimeout(this._t);
+    if (this._ro) this._ro.disconnect();
+    if (this._heroRo) this._heroRo.disconnect();
+    if (this._heroCleanup) this._heroCleanup();
+    if (this._contactRaf) cancelAnimationFrame(this._contactRaf);
+    if (this._contactRo) this._contactRo.disconnect();
+    if (this._contactCleanup) this._contactCleanup();
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+  }
+
+  initHero() {
+    const canvas = document.getElementById('agHero');
+    if (!canvas) return;
+    const host = canvas.closest('section');
+    if (!host) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let W = 0, H = 0;
+    const resize = () => {
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      W = r.width; H = r.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+    };
+    resize();
+    this._heroRo = new ResizeObserver(resize);
+    this._heroRo.observe(canvas);
+
+    // build a loose network of nodes biased toward the right half
+    const COUNT = 54;
+    const nodes = [];
+    for (let i = 0; i < COUNT; i++) {
+      nodes.push({
+        hx: 0.18 + Math.random() * 0.82,
+        hy: Math.random(),
+        x: 0, y: 0, vx: 0, vy: 0,
+        ph: Math.random() * Math.PI * 2,
+        sp: 0.25 + Math.random() * 0.5,
+        amp: 0.012 + Math.random() * 0.022,
+        rad: Math.random() < 0.8 ? (1.8 + Math.random() * 2.4) : 0,
+        ring: Math.random() < 0.2,
+      });
+    }
+    nodes.forEach((n) => { n.x = n.hx * (W || 1000); n.y = n.hy * (H || 500); });
+
+    const mouse = { x: -9999, y: -9999, active: false };
+    const onMove = (e) => {
+      const r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left;
+      mouse.y = e.clientY - r.top;
+      mouse.active = true;
+    };
+    const onLeave = () => { mouse.active = false; mouse.x = -9999; mouse.y = -9999; };
+    host.addEventListener('mousemove', onMove, { passive: true });
+    host.addEventListener('mouseleave', onLeave, { passive: true });
+    this._heroCleanup = () => {
+      host.removeEventListener('mousemove', onMove);
+      host.removeEventListener('mouseleave', onLeave);
+    };
+
+    const start = performance.now();
+    const REP_R = 150;   // repel radius
+    const LINK_D = 132;  // link distance
+
+    const draw = (now) => {
+      const t = (now - start) / 1000;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      ctx.scale(dpr, dpr);
+
+      nodes.forEach((n) => {
+        const tx = (n.hx + Math.sin(t * n.sp + n.ph) * n.amp) * W;
+        const ty = (n.hy + Math.cos(t * n.sp * 0.92 + n.ph) * n.amp) * H;
+        // spring toward drifting home
+        n.vx += (tx - n.x) * 0.045;
+        n.vy += (ty - n.y) * 0.045;
+        // repel from cursor
+        if (mouse.active) {
+          const dx = n.x - mouse.x, dy = n.y - mouse.y;
+          const d = Math.hypot(dx, dy);
+          if (d < REP_R && d > 0.01) {
+            const f = (1 - d / REP_R);
+            n.vx += (dx / d) * f * f * 26;
+            n.vy += (dy / d) * f * f * 26;
+          }
+        }
+        n.vx *= 0.84; n.vy *= 0.84;
+        n.x += n.vx; n.y += n.vy;
+      });
+
+      // links
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i], b = nodes[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const d = Math.hypot(dx, dy);
+          if (d < LINK_D) {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = 'rgba(37,99,235,' + (0.26 * (1 - d / LINK_D)).toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // nodes
+      nodes.forEach((n) => {
+        const rad = n.rad || 2.6;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad, 0, Math.PI * 2);
+        if (n.ring) {
+          ctx.fillStyle = '#f7f7f4';
+          ctx.fill();
+          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = '#2563eb';
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = '#2563eb';
+          ctx.fill();
+        }
+      });
+
+      ctx.restore();
+      this._heroRaf = requestAnimationFrame(draw);
+    };
+    this._heroRaf = requestAnimationFrame(draw);
+  }
+
+  _reveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const hide = (el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.22,0.61,0.36,1), transform 0.7s cubic-bezier(0.22,0.61,0.36,1)';
+    };
+    const vh = () => window.innerHeight || 800;
+    // initial: reveal anything in view, hide only what is below the fold
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh() * 0.92) { reveal(el); } else { hide(el); }
+    });
+    const check = () => {
+      const h = vh();
+      els.forEach((el) => { if (el.getBoundingClientRect().top < h * 0.9) reveal(el); });
+    };
+    this._onScroll = check;
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check, { passive: true });
+    // safety: never leave anything hidden
+    setTimeout(() => els.forEach(reveal), 2500);
+  }
+
+  setCat(id) { this.setState((s) => ({ activeCat: s.activeCat === id ? null : id })); }
+  clearCat() { this.setState({ activeCat: null }); }
+  selectProject(i) { this.setState({ selected: i }); }
+
+  initContact() {
+    const canvas = document.getElementById('agContact');
+    if (!canvas) return;
+    const host = canvas.closest('section');
+    if (!host) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let W = 0, H = 0;
+    const resize = () => {
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      W = r.width; H = r.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+    };
+    resize();
+    this._contactRo = new ResizeObserver(resize);
+    this._contactRo.observe(canvas);
+
+    const COUNT = 52;
+    const nodes = [];
+    for (let i = 0; i < COUNT; i++) {
+      nodes.push({
+        hx: Math.random(),
+        hy: Math.random(),
+        x: 0, y: 0, vx: 0, vy: 0,
+        ph: Math.random() * Math.PI * 2,
+        sp: 0.22 + Math.random() * 0.45,
+        amp: 0.012 + Math.random() * 0.020,
+        rad: Math.random() < 0.78 ? (1.8 + Math.random() * 2.6) : 0,
+        ring: Math.random() < 0.22,
+      });
+    }
+    nodes.forEach((n) => { n.x = n.hx * (W || 1000); n.y = n.hy * (H || 500); });
+
+    const mouse = { x: -9999, y: -9999, active: false };
+    const onMove = (e) => {
+      const r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left;
+      mouse.y = e.clientY - r.top;
+      mouse.active = true;
+    };
+    const onLeave = () => { mouse.active = false; mouse.x = -9999; mouse.y = -9999; };
+    host.addEventListener('mousemove', onMove, { passive: true });
+    host.addEventListener('mouseleave', onLeave, { passive: true });
+    this._contactCleanup = () => {
+      host.removeEventListener('mousemove', onMove);
+      host.removeEventListener('mouseleave', onLeave);
+    };
+
+    const start = performance.now();
+    const REP_R = 150;
+    const LINK_D = 128;
+
+    const draw = (now) => {
+      const t = (now - start) / 1000;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      ctx.scale(dpr, dpr);
+
+      nodes.forEach((n) => {
+        const tx = (n.hx + Math.sin(t * n.sp + n.ph) * n.amp) * W;
+        const ty = (n.hy + Math.cos(t * n.sp * 0.9 + n.ph) * n.amp) * H;
+        n.vx += (tx - n.x) * 0.045;
+        n.vy += (ty - n.y) * 0.045;
+        if (mouse.active) {
+          const dx = n.x - mouse.x, dy = n.y - mouse.y;
+          const d = Math.hypot(dx, dy);
+          if (d < REP_R && d > 0.01) {
+            const f = (1 - d / REP_R);
+            n.vx += (dx / d) * f * f * 26;
+            n.vy += (dy / d) * f * f * 26;
+          }
+        }
+        n.vx *= 0.84; n.vy *= 0.84;
+        n.x += n.vx; n.y += n.vy;
+      });
+
+      // links — lighter blue on dark bg
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i], b = nodes[j];
+          const d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < LINK_D) {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = 'rgba(99,179,255,' + (0.3 * (1 - d / LINK_D)).toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // nodes
+      nodes.forEach((n) => {
+        const rad = n.rad || 2.6;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad, 0, Math.PI * 2);
+        if (n.ring) {
+          ctx.fillStyle = 'rgba(20,22,28,0)';
+          ctx.fill();
+          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = 'rgba(99,179,255,0.75)';
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = '#3b82f6';
+          ctx.fill();
+        }
+      });
+
+      ctx.restore();
+      this._contactRaf = requestAnimationFrame(draw);
+    };
+    this._contactRaf = requestAnimationFrame(draw);
+  }
+
+  initGraph() {
+    const canvas = document.getElementById('agSkills');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const resize = () => {
+      const r = canvas.getBoundingClientRect();
+      if (r.width === 0) return;
+      canvas.width = Math.round(r.width * dpr);
+      canvas.height = Math.round(r.height * dpr);
+    };
+    resize();
+    this._ro = new ResizeObserver(resize);
+    this._ro.observe(canvas);
+
+    this._hover = null;
+    canvas.addEventListener('mousemove', (e) => {
+      const r = canvas.getBoundingClientRect();
+      const mx = (e.clientX - r.left) * dpr, my = (e.clientY - r.top) * dpr;
+      let found = null;
+      (this._layout || []).forEach((h) => {
+        const d = Math.hypot(mx - h.x, my - h.y);
+        if (d < h.hit) found = h.id;
+      });
+      this._hover = found;
+      canvas.style.cursor = found ? 'pointer' : 'default';
+    });
+    canvas.addEventListener('mouseleave', () => { this._hover = null; });
+    canvas.addEventListener('click', () => { if (this._hover) this.setCat(this._hover); });
+
+    const accent = '#2563eb';
+    const cats = this.cats;
+    const start = performance.now();
+
+    const draw = (now) => {
+      const t = (now - start) / 1000;
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      const cx = w * 0.5, cy = h * 0.5;
+      const base = Math.min(w, h);
+      const active = this.state.activeCat || this._hover;
+
+      const hubLayout = [];
+      const N = cats.length;
+      cats.forEach((cat, i) => {
+        const ang = (i / N) * Math.PI * 2 - Math.PI / 2;
+        const wob = Math.sin(t * 0.4 + i) * 0.03;
+        const R = base * 0.31;
+        const hx = cx + Math.cos(ang + wob) * R * (w / base) * 0.92;
+        const hy = cy + Math.sin(ang + wob) * R;
+        const on = !active || active === cat.id;
+        hubLayout.push({ id: cat.id, x: hx, y: hy, hit: 30 * dpr });
+
+        // hub -> center edge
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(hx, hy);
+        ctx.strokeStyle = on ? 'rgba(37,99,235,0.28)' : 'rgba(20,22,28,0.07)';
+        ctx.lineWidth = 1 * dpr;
+        ctx.stroke();
+
+        // leaves
+        const leaves = cat.skills;
+        const M = leaves.length;
+        leaves.forEach((sk, j) => {
+          const spread = Math.PI * 0.9;
+          const la = ang + (M === 1 ? 0 : (j / (M - 1) - 0.5) * spread);
+          const lr = base * (0.14 + (M > 3 ? 0.0 : 0.0)) + Math.sin(t * 0.6 + i + j) * base * 0.012;
+          const lx = hx + Math.cos(la) * (base * 0.15);
+          const ly = hy + Math.sin(la) * (base * 0.15) + (M === 1 ? 0 : 0);
+          ctx.beginPath();
+          ctx.moveTo(hx, hy);
+          ctx.lineTo(lx, ly);
+          ctx.strokeStyle = on ? 'rgba(37,99,235,0.18)' : 'rgba(20,22,28,0.05)';
+          ctx.lineWidth = 1 * dpr;
+          ctx.stroke();
+
+          if (on) {
+            const prog = ((t * 0.5 + i * 0.3 + j * 0.2) % 1);
+            const px = hx + (lx - hx) * prog, py = hy + (ly - hy) * prog;
+            ctx.beginPath();
+            ctx.arc(px, py, 1.8 * dpr, 0, Math.PI * 2);
+            ctx.fillStyle = accent;
+            ctx.globalAlpha = 0.8 * (1 - Math.abs(prog - 0.5));
+            ctx.fill();
+            ctx.globalAlpha = 1;
+          }
+
+          // leaf node
+          ctx.beginPath();
+          ctx.arc(lx, ly, 4 * dpr, 0, Math.PI * 2);
+          ctx.fillStyle = '#f7f7f4';
+          ctx.fill();
+          ctx.lineWidth = 1.4 * dpr;
+          ctx.strokeStyle = on ? accent : 'rgba(20,22,28,0.25)';
+          ctx.stroke();
+          // leaf label
+          ctx.font = `${10 * dpr}px 'JetBrains Mono', monospace`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillStyle = on ? '#14161c' : 'rgba(20,22,28,0.3)';
+          const lines = sk.split('\n');
+          lines.forEach((ln, k) => {
+            const oy = ly + 14 * dpr + k * 11 * dpr;
+            ctx.fillText(ln, lx, oy);
+          });
+        });
+
+        // hub node
+        ctx.beginPath();
+        ctx.arc(hx, hy, 9 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = on ? accent : 'rgba(20,22,28,0.18)';
+        ctx.fill();
+        ctx.font = `600 ${11 * dpr}px 'JetBrains Mono', monospace`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = on ? '#14161c' : 'rgba(20,22,28,0.3)';
+        ctx.fillText(cat.label, hx, hy - 22 * dpr);
+      });
+
+      this._layout = hubLayout;
+
+      // center node
+      ctx.beginPath();
+      ctx.arc(cx, cy, 26 * dpr, 0, Math.PI * 2);
+      ctx.fillStyle = '#14161c';
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = `600 ${10 * dpr}px 'JetBrains Mono', monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('STACK', cx, cy);
+
+      this._raf = requestAnimationFrame(draw);
+    };
+    this._raf = requestAnimationFrame(draw);
+  }
+
+  renderVals() {
+    const active = this.state.activeCat;
+    const chipBase = "font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 15px;border-radius:999px;cursor:pointer;transition:all 0.2s;background:transparent;white-space:nowrap;";
+    const mkChipStyle = (on) => chipBase + (on
+      ? 'border:1px solid #2563eb;color:#fff;background:#2563eb;'
+      : 'border:1px solid rgba(20,22,28,0.18);color:#5b5e66;');
+
+    const chips = this.cats.map((c) => ({
+      label: c.label,
+      style: mkChipStyle(active === c.id),
+      onClick: () => this.setCat(c.id),
+    }));
+
+    const projectRows = this.projects.map((p, i) => {
+      const on = this.state.selected === i;
+      return {
+        name: p.name,
+        meta: p.tag + ' · ' + p.year,
+        onClick: () => this.selectProject(i),
+        style: "display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px 18px;border-radius:14px;cursor:pointer;transition:all 0.2s;background:" +
+          (on ? '#f7f7f4' : 'transparent') + ';border:1px solid ' + (on ? '#2563eb' : 'rgba(20,22,28,0.1)') + ';',
+        dotStyle: "flex:none;width:10px;height:10px;border-radius:50%;background:" + (on ? '#2563eb' : 'rgba(20,22,28,0.2)') + ';',
+      };
+    });
+
+    const sel = this.projects[this.state.selected];
+    const archDiagram = React.createElement(
+      'div',
+      { style: { display: 'flex', alignItems: 'stretch', gap: '0', flexWrap: 'wrap' } },
+      sel.stages.flatMap((st, idx) => {
+        const box = React.createElement(
+          'div',
+          { key: 'b' + idx, style: { flex: '1 1 0', minWidth: '88px', display: 'flex', flexDirection: 'column', gap: '5px', padding: '12px', border: '1px solid rgba(20,22,28,0.12)', borderRadius: '10px', background: 'rgba(255,255,255,0.5)' } },
+          React.createElement('span', { style: { fontFamily: "'JetBrains Mono', monospace", fontSize: '9px', letterSpacing: '0.1em', color: '#8b8e96' } }, st[0] + ' · ' + st[1]),
+          React.createElement('span', { style: { fontSize: '13px', fontWeight: 700, color: '#14161c', lineHeight: 1.2 } }, st[2]),
+        );
+        if (idx === sel.stages.length - 1) return [box];
+        const arrow = React.createElement('div', { key: 'a' + idx, style: { display: 'flex', alignItems: 'center', padding: '0 4px', color: '#2563eb', fontFamily: "'JetBrains Mono', monospace", fontWeight: 600, fontSize: '13px' } }, '→');
+        return [box, arrow];
+      })
+    );
+
+    return {
+      chips,
+      allChipStyle: mkChipStyle(active === null),
+      clearCat: () => this.clearCat(),
+      projectRows,
+      selected: sel,
+      archDiagram,
+    };
+  }
+}
+</script>
+</body>
+</html>
